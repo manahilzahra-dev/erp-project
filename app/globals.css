@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
+/* ============================================
+   ERP DESIGN SYSTEM — Strict Typography & Colors
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Brand Colors */
+  --brand-50: #eff6ff;
+  --brand-100: #dbeafe;
+  --brand-500: #3b82f6;
+  --brand-600: #2563eb;
+  --brand-700: #1d4ed8;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Surfaces (Backgrounds) */
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --surface-subtle: #f1f5f9;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Borders */
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  /* Text Colors */
+  --text-primary: #0f172a;    /* Headings, main text */
+  --text-secondary: #475569;  /* Paragraphs, descriptions */
+  --text-muted: #94a3b8;      /* Labels, placeholders, disabled */
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgb(15 23 42 / 0.06), 0 1px 2px -1px rgb(15 23 42 / 0.04);
+  --shadow-md: 0 4px 6px -2px rgb(15 23 42 / 0.05), 0 2px 4px -2px rgb(15 23 42 / 0.04);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--surface-muted);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+/* ============================================
+   TYPOGRAPHY RULES (Strict)
+   ============================================ */
+
+/* Page Titles (H1) */
+.erp-title {
+  font-size: 24px;
+  font-weight: 600; /* Semi-bold, not too heavy */
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Subtitles (H2, H3) */
+.erp-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Normal Text (Paragraphs) */
+.erp-text {
+  font-size: 14px;
+  font-weight: 400; /* Regular */
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Small Labels (Table headers, field names, tags) */
+.erp-label {
+  font-size: 11px;
+  font-weight: 600; /* Semi-bold for readability */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* Data Numbers (Stats, IDs) */
+.erp-data {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums; /* Numbers align perfectly */
+  letter-spacing: -0.02em;
+}
+
+/* ============================================
+   COMPONENT CLASSES
+   ============================================ */
+
+.erp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.erp-card-hover {
+  transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.erp-card-hover:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+/* Sidebar Navigation */
+.erp-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.erp-nav-item:hover {
+  background: var(--surface-subtle);
+  color: var(--text-primary);
+}
+
+.erp-nav-item-active {
+  background: var(--brand-50);
+  color: var(--brand-700);
+}
+
+.erp-nav-item-active:hover {
+  background: var(--brand-50);
+  color: var(--brand-700);
 }
