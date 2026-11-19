@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ERP System - Enterprise Resource Planning
 
-## Getting Started
+A complete, full-stack ERP (Enterprise Resource Planning) software solution built with **Next.js 15**, **TypeScript**, **MongoDB**, and **Tailwind CSS**.
 
-First, run the development server:
+## 🚀 Live Demo
+[https://erprojectoffice.netlify.app](https://erprojectoffice.netlify.app)
+
+## 🔐 Demo Credentials
+- **Email:** `manahil@techwave.com`
+- **Password:** `test123456`
+- **Role:** Admin
+
+## ✨ Features
+
+### Human Resources
+- Employee Management (CRUD + View)
+- Attendance Tracking (Daily + Auto Leave Integration)
+- Payroll Generation (Auto-calculation based on attendance)
+- Leave Management (Apply, Approve/Reject, Auto-attendance)
+
+### Operations
+- Inventory Management (Products, Stock, Low Stock Alerts)
+- Supplier Management (CRUD)
+- Purchasing (Purchase Orders + Auto Stock Update + Auto Expense)
+
+### Sales
+- Customer Management (CRUD)
+- Sales & Invoicing (Tax Calculation + Auto Stock Deduction)
+
+### Finance
+- Income & Expense Tracking
+- Profit/Loss Calculation
+- Auto-Integration with Sales & Purchasing
+
+### Workspace
+- Project Management (CRUD)
+- Task Assignment (Priority, Status, Due Date)
+
+### Reporting & Security
+- Business Reports (Dashboard, Financial Overview, Low Stock)
+- Audit Logs (Track every action with user + timestamp)
+- Notifications (Auto-refresh with bell icon)
+- Role-Based Access Control (Admin, HR, Finance, Inventory, Sales, Management)
+- Secure Authentication (JWT + bcrypt)
+
+## 🛠️ Tech Stack
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Database:** MongoDB (Atlas)
+- **ORM:** Mongoose
+- **Styling:** Tailwind CSS v4
+- **Authentication:** JWT + bcryptjs
+- **Deployment:** Netlify
+## 👨‍💻Developed By
+
+## 📦 Installation (Local)
+## Manahil Zahra
+## TechWave Developer Internship
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/manahilzahra-dev/erp-project.git
+cd erp-project
+npm install
